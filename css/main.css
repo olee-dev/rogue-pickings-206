@@ -3,7 +3,6 @@ html {
 }
 
 body {
-
 	font-family: 'Montserrat', Helvetica, Arial, sans-serif;
 	font-size: 1em;
 	display: flex;
@@ -29,8 +28,6 @@ h3 {
 }
 h1 {
 	font-size: 1.875em;
-	border-bottom: 3px solid #77a466;
-	width: 100%;
 }
 h2 {
 	font-size: 1.125em;
@@ -48,35 +45,37 @@ p {
 /*The widths are in a percentage!*/
 header {
 	border-bottom: 3px solid #77a466;
+	text-align: center;
 	width: 100%;
-	margin: 0 auto;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	flex-flow: column wrap;
-	flex-basis: 100%;
+	flex-flow: row wrap;
 }
 
 header h1 {
 	margin: 0;
 	padding: 35px 0 20px 0;
-	text-align: center;
+	border-bottom: 3px solid #77a466;
+	width: 100%;
 }
 header h1 span {
 	color: #77a466;
 }
 
 header nav {
-	padding: 30px 0;
+	padding: 20px 0;
+	width: 100%;
 }
 header nav ul {
 	margin: 0;
+	padding: 0;
 }
 header nav ul li {
 	text-transform: uppercase;
 	font-weight: 700;
 	font-size: 0.875em;
-	padding: 10px 40px 10px 0;
+	padding: 10px 0;
 	list-style-type: none;
 	
 }
@@ -94,9 +93,6 @@ header nav ul li a {
 	align-items: center;
 }
 
-.main-image {
-	height: auto;
-}
 .main-image img {
 	width: 100%;
 	border-bottom: 3px solid #77a466;
@@ -106,6 +102,7 @@ header nav ul li a {
 	height: auto;
 }
 .main-title h2 {
+	text-align: left;
 	padding: 5px 0;
 	color: #77a466;
 }
@@ -152,6 +149,7 @@ header nav ul li a {
 footer {
 	border-top: 3px solid #eee;
 	margin: 0 auto;
+	width: 100%;
 	text-align: center;
 	display: flex;
 	justify-content: center;
@@ -162,4 +160,52 @@ footer span {
 	text-transform: lowercase;
 	color: #77a466;
 	font-size: 0.875em;
+}
+
+
+@media all and (min-width: 768px) {
+	/* Tablet styles here */
+	.bottom-section {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		border-top: solid 1px #eee;
+	}
+
+	.section-one, 
+	.section-two, 
+	.section-three {
+		flex-basis: 30%;
+	}
+
+	.section-two {
+		border-left: solid 1px #eee;
+		border-right: solid 1px #eee;
+		padding: 0 20px;
+	}
+
+}
+
+@media all and (min-width: 1200px) {
+	/* Desktop styles here */
+	header {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	header h1 {
+		width: 60%;
+		padding: 0;
+		border-bottom: none;
+		text-align: left;
+	}
+
+	header nav {
+		width: 40%;
+	}
+
+	header nav ul {
+		display: flex;
+		justify-content: space-between;
+	}
 }
